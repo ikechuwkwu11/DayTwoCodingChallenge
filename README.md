@@ -9,17 +9,22 @@ A lightweight and secure REST API built with Django and Django REST Framework (D
 - Clean and structured error handling for API responses
 
 ## 🛠 Tech Stack
-- Layer	Technology
-- Language	Python
-- Web Framework	Django
-- API Framework	Django REST Framework
-- Authentication	Custom Token System
+| Layer          | Technology                  |
+| -------------- | --------------------------- |
+| Language       | Python                      |
+| Web Framework  | Django                      |
+| API Framework  | Django REST Framework (DRF) |
+| Authentication | Custom Token System         |
+
 
 ## 📁 File Structure Overview
-- views.py – Handles core logic: registration, login, logout, and protected views
-- models.py – Defines the User and AccessToken models
-- serializers.py – Serializes user credentials and token data
-- authentication.py – Custom DRF authentication class using the AccessToken model
+| File                | Responsibility                                      |
+| ------------------- | --------------------------------------------------- |
+| `views.py`          | Core logic: registration, login, logout, auth views |
+| `models.py`         | Custom `AccessToken` model and user setup           |
+| `serializers.py`    | Input/output validation for users and tokens        |
+| `authentication.py` | Custom DRF `BaseAuthentication` subclass            |
+
 
 ## 🔒 How It Works
 - Register a user via the /register endpoint.
